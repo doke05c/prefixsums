@@ -1,7 +1,7 @@
 public class November_9 {
   public static void main (String[] args) {
     int[] a = {0, 1, 1, 0, 1};
-    // System.out.println(arrToString(prefix(a)));
+    System.out.println(arrToString(prefix(a)));
     System.out.println(arrToString(prefixlin(a)));
   }
 
@@ -19,13 +19,13 @@ public class November_9 {
 
 
   public static int[] prefix(int[] a) {
-    int[] ans = new int[a.length];
+    int[] ans = new int[a.length+1];
     for (int i=0;i<a.length;i++) {
       int sum = 0;
       for (int j=0;j<i+1;j++) {
         sum += a[j];
       }
-      ans[i] = sum;
+      ans[i+1] = sum;
     }
     return ans;
   }
